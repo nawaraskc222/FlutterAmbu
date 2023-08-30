@@ -1,28 +1,32 @@
 import 'package:flutter/material.dart';
 
-class MyLogin extends StatefulWidget {
-  const MyLogin({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
 
   @override
-  State<MyLogin> createState() => _MyLoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _MyLoginState extends State<MyLogin> {
+class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/login.png'), fit: BoxFit.cover),
+            image: AssetImage('assets/register.png'), fit: BoxFit.cover),
       ),
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
         backgroundColor: Colors.transparent,
         body: Stack(
           children: [
             Container(
-              padding: EdgeInsets.only(left: 39, top: 120),
+              padding: EdgeInsets.only(left: 39, top: 20),
               child: Text(
-                "welcome \n back",
+                "Create\n Account",
                 style: TextStyle(
                     color: const Color.fromARGB(255, 196, 181, 180),
                     fontSize: 33),
@@ -59,6 +63,18 @@ class _MyLoginState extends State<MyLogin> {
                     SizedBox(
                       height: 30,
                     ),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color.fromARGB(255, 216, 187, 81),
+                          hintText: "Number",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
                     Row(
                       children: [
                         Text(
@@ -86,11 +102,8 @@ class _MyLoginState extends State<MyLogin> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/register');
-                              print("one tow");
-                            },
-                            child: Text('Sign up',
+                            onPressed: () {},
+                            child: Text('sign up',
                                 style: TextStyle(
                                   color: Color.fromARGB(255, 88, 133, 170),
                                   decoration: TextDecoration.underline,
