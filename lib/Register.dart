@@ -37,14 +37,27 @@ class _RegisterState extends State<Register> {
                 padding: EdgeInsets.only(
                     left: 35,
                     right: 35,
-                    top: MediaQuery.of(context).size.height * 0.5),
+                    top: MediaQuery.of(context).size.height * 0.22),
                 child: Column(
                   children: [
                     TextField(
                       decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: Colors.white)),
+                        filled: true,
+                        fillColor: Color.fromARGB(255, 216, 187, 81),
+                        hintText: "Full Name",
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
                           filled: true,
                           fillColor: Color.fromARGB(255, 216, 187, 81),
-                          hintText: "email",
+                          hintText: "Email",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20))),
                     ),
@@ -68,7 +81,31 @@ class _RegisterState extends State<Register> {
                       decoration: InputDecoration(
                           filled: true,
                           fillColor: Color.fromARGB(255, 216, 187, 81),
+                          hintText: "Location",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color.fromARGB(255, 216, 187, 81),
                           hintText: "Number",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20))),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color.fromARGB(255, 216, 187, 81),
+                          hintText: "BloodType",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20))),
                     ),
@@ -78,7 +115,7 @@ class _RegisterState extends State<Register> {
                     Row(
                       children: [
                         Text(
-                          "Sign In",
+                          "Register ",
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 27),
                         ),
@@ -95,30 +132,30 @@ class _RegisterState extends State<Register> {
                       ],
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TextButton(
-                            onPressed: () {},
-                            child: Text('sign up',
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 88, 133, 170),
-                                  decoration: TextDecoration.underline,
-                                  fontSize: 18,
-                                ))),
-                        TextButton(
-                            onPressed: () {},
-                            child: Text('Forget Passoword',
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 88, 133, 170),
-                                  decoration: TextDecoration.underline,
-                                  fontSize: 18,
-                                ))),
-                      ],
-                    )
+                    // SizedBox(
+                    //   height: 30,
+                    // ),
+                    // Row(
+                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //   children: [
+                    //     TextButton(
+                    //         onPressed: () {},
+                    //         child: Text('sign up',
+                    //             style: TextStyle(
+                    //               color: Color.fromARGB(255, 88, 133, 170),
+                    //               decoration: TextDecoration.underline,
+                    //               fontSize: 18,
+                    //             ))),
+                    //     TextButton(
+                    //         onPressed: () {},
+                    //         child: Text('Forget Passoword',
+                    //             style: TextStyle(
+                    //               color: Color.fromARGB(255, 88, 133, 170),
+                    //               decoration: TextDecoration.underline,
+                    //               fontSize: 18,
+                    //             ))),
+                    //   ],
+                    // )
                   ],
                 ),
               ),

@@ -42,7 +42,7 @@ class _MyLoginState extends State<MyLogin> {
                           fillColor: Color.fromARGB(255, 216, 187, 81),
                           hintText: "email",
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20))),
+                              borderRadius: BorderRadius.circular(10))),
                     ),
                     SizedBox(
                       height: 30,
@@ -54,7 +54,7 @@ class _MyLoginState extends State<MyLogin> {
                           fillColor: Color.fromARGB(255, 216, 187, 81),
                           hintText: "password",
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20))),
+                              borderRadius: BorderRadius.circular(10))),
                     ),
                     SizedBox(
                       height: 30,
